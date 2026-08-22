@@ -1,4 +1,3 @@
-
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
@@ -13,41 +12,28 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+// Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/resume", resumeRoutes);
 app.use("/api/interview", interviewRoutes);
 
+// Health check
 app.get("/", (req, res) => {
   res.json({
-    message:
-      "AI Placement Copilot API is running 🚀",
+    message: "AI Placement Copilot API is running 🚀",
   });
 });
 
+// MongoDB connection
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
-    console.log(
-      "MongoDB Atlas Connected ✅"
-    );
-
-    const PORT =
-      process.env.PORT || 5000;
-
-    app.listen(
-      PORT,
-      "0.0.0.0",
-      () => {
-        console.log(
-          `Server running on port ${PORT}`
-        );
-      }
-    );
+    console.log("MongoDB Atlas Connected ✅");
   })
   .catch((error) => {
-    console.error(
-      "MongoDB connection failed ❌"
-    );
-
+    console.error("MongoDB connection failed ❌");
     console.error(error.message);
   });
+
+// Export Express app for Vercel
+module.exports = app;
