@@ -1,0 +1,353 @@
+/* ==========================================
+   RESUME PAGE
+========================================== */
+
+.resume-page {
+  min-height: 100vh;
+  background: #020a10;
+  color: #eaf4ff;
+  padding: 25px;
+  box-sizing: border-box;
+}
+
+
+/* ==========================================
+   BACK BUTTON
+========================================== */
+
+.resume-back-btn {
+  background: transparent;
+  border: 1px solid #173b4b;
+  color: #9ac9e8;
+  padding: 13px 20px;
+  border-radius: 12px;
+  font-size: 17px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.resume-back-btn:hover {
+  border-color: #00d9ff;
+  color: #00d9ff;
+}
+
+
+/* ==========================================
+   CONTAINER
+========================================== */
+
+.resume-container {
+  width: min(950px, 100%);
+  margin: 100px auto 70px;
+}
+
+
+/* ==========================================
+   HEADING
+========================================== */
+
+.resume-heading {
+  margin-bottom: 45px;
+}
+
+.resume-label {
+  color: #00d9ff;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 4px;
+}
+
+.resume-heading h1 {
+  margin: 15px 0 12px;
+  font-size: clamp(42px, 6vw, 68px);
+  line-height: 1.05;
+  color: #eaf4ff;
+}
+
+.resume-heading p {
+  margin: 0;
+  max-width: 700px;
+  color: #78a7c8;
+  font-size: 20px;
+  line-height: 1.6;
+}
+
+
+/* ==========================================
+   UPLOAD CARD
+========================================== */
+
+.resume-card {
+  background: #081923;
+  border: 1px solid #164b60;
+  border-radius: 22px;
+  padding: 40px;
+}
+
+.resume-card-heading {
+  margin-bottom: 28px;
+}
+
+.resume-card-heading h2 {
+  margin: 0 0 8px;
+  font-size: 28px;
+  color: #eaf4ff;
+}
+
+.resume-card-heading p {
+  margin: 0;
+  color: #78a7c8;
+}
+
+
+/* ==========================================
+   DROPZONE
+========================================== */
+
+.resume-dropzone {
+  min-height: 300px;
+  border: 2px dashed #19536a;
+  border-radius: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: 0.25s ease;
+  box-sizing: border-box;
+  padding: 30px;
+}
+
+.resume-dropzone:hover,
+.resume-dropzone.drag-active {
+  border-color: #00d9ff;
+  background: #061721;
+}
+
+.upload-icon {
+  width: 65px;
+  height: 65px;
+  border: 1px solid #00d9ff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00d9ff;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.resume-dropzone h3 {
+  margin: 0 0 8px;
+  font-size: 23px;
+  color: #eaf4ff;
+}
+
+.resume-dropzone p {
+  margin: 0 0 12px;
+  color: #78a7c8;
+  font-size: 16px;
+}
+
+.resume-dropzone span {
+  color: #527f9c;
+  font-size: 13px;
+}
+
+
+/* ==========================================
+   ERROR
+========================================== */
+
+.resume-error {
+  margin-top: 20px;
+  padding: 15px 18px;
+  border: 1px solid #8b3636;
+  background: #301214;
+  color: #ff8585;
+  border-radius: 10px;
+}
+
+
+/* ==========================================
+   SELECTED FILE
+========================================== */
+
+.selected-file {
+  margin-top: 22px;
+  padding: 18px;
+  background: #06131c;
+  border: 1px solid #17485c;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.file-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 9px;
+  background: #00d9ff;
+  color: #001018;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.file-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-width: 0;
+}
+
+.file-info strong {
+  color: #eaf4ff;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.file-info span {
+  color: #6995b2;
+  font-size: 13px;
+}
+
+.remove-file-btn {
+  background: transparent;
+  border: 1px solid #713939;
+  color: #ff8585;
+  padding: 9px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.remove-file-btn:hover {
+  background: #351719;
+}
+
+
+/* ==========================================
+   ANALYZE BUTTON
+========================================== */
+
+.analyze-resume-btn {
+  width: 100%;
+  margin-top: 25px;
+  padding: 17px;
+  border: none;
+  border-radius: 11px;
+  background: #00cce9;
+  color: #001018;
+  font-size: 17px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.analyze-resume-btn:hover:not(:disabled) {
+  background: #00e0ff;
+  transform: translateY(-1px);
+}
+
+.analyze-resume-btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+
+/* ==========================================
+   FEATURES
+========================================== */
+
+.resume-features {
+  margin-top: 30px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.resume-feature {
+  background: #07131c;
+  border: 1px solid #143542;
+  border-radius: 18px;
+  padding: 28px;
+}
+
+.feature-icon {
+  color: #00d9ff;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+.resume-feature h3 {
+  margin: 0 0 10px;
+  color: #eaf4ff;
+  font-size: 21px;
+}
+
+.resume-feature p {
+  margin: 0;
+  color: #719dbb;
+  line-height: 1.6;
+}
+
+
+/* ==========================================
+   RESPONSIVE
+========================================== */
+
+@media (max-width: 800px) {
+
+  .resume-container {
+    margin-top: 65px;
+  }
+
+  .resume-card {
+    padding: 25px;
+  }
+
+  .resume-features {
+    grid-template-columns: 1fr;
+  }
+
+}
+
+
+@media (max-width: 550px) {
+
+  .resume-page {
+    padding: 18px;
+  }
+
+  .resume-heading h1 {
+    font-size: 42px;
+  }
+
+  .resume-heading p {
+    font-size: 17px;
+  }
+
+  .resume-card {
+    padding: 20px;
+  }
+
+  .resume-dropzone {
+    min-height: 250px;
+  }
+
+  .selected-file {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+
+  .remove-file-btn {
+    width: 100%;
+  }
+
+}

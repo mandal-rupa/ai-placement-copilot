@@ -1,0 +1,520 @@
+/* =========================================
+   LEARNING PAGE
+========================================= */
+
+.learning-page {
+  min-height: 100vh;
+  width: 100%;
+
+  background: #020b11;
+  color: #eef7ff;
+
+  padding: 40px 20px;
+
+  box-sizing: border-box;
+}
+
+.learning-container {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+
+  box-sizing: border-box;
+}
+
+/* =========================================
+   BACK BUTTON
+========================================= */
+
+.back-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+
+  border: 1px solid #08d9f5;
+  border-radius: 14px;
+
+  color: #08d9f5;
+
+  padding: 14px 24px;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  margin-bottom: 70px;
+
+  transition: all 0.2s ease;
+}
+
+.back-btn:hover {
+  background: #08d9f5;
+  color: #020b11;
+}
+
+/* =========================================
+   LEARNING HEADING
+========================================= */
+
+.learning-heading {
+  margin-bottom: 50px;
+}
+
+.learning-heading > span {
+  display: block;
+
+  color: #08d9f5;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  letter-spacing: 4px;
+
+  margin-bottom: 18px;
+}
+
+.learning-heading h1 {
+  margin: 0 0 18px;
+
+  color: #eef7ff;
+
+  font-size: clamp(48px, 7vw, 76px);
+
+  line-height: 1.05;
+
+  font-weight: 800;
+}
+
+.learning-heading p {
+  margin: 0;
+
+  color: #78a9ce;
+
+  font-size: 20px;
+
+  line-height: 1.6;
+}
+
+/* =========================================
+   LEARNING PROGRESS
+========================================= */
+
+.learning-progress {
+  width: 100%;
+
+  margin-bottom: 40px;
+  padding: 26px 30px;
+
+  background: #07141c;
+
+  border: 1px solid #193b4a;
+  border-radius: 20px;
+
+  box-sizing: border-box;
+}
+
+.learning-progress-header {
+  display: flex;
+
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  margin-bottom: 16px;
+}
+
+.learning-progress-header span {
+  color: #78a9ce;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  letter-spacing: 2px;
+}
+
+.learning-progress-header strong {
+  color: #08d9f5;
+
+  font-size: 15px;
+}
+
+.learning-progress-track {
+  width: 100%;
+  height: 10px;
+
+  background: #102733;
+
+  border-radius: 999px;
+
+  overflow: hidden;
+}
+
+.learning-progress-fill {
+  height: 100%;
+
+  background: #08d9f5;
+
+  border-radius: 999px;
+
+  transition: width 0.4s ease;
+}
+
+.learning-progress small {
+  display: block;
+
+  margin-top: 10px;
+
+  color: #78a9ce;
+
+  font-size: 14px;
+}
+
+/* =========================================
+   LEARNING TOPICS
+========================================= */
+
+.learning-topics {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 24px;
+
+  width: 100%;
+}
+
+.learning-topic {
+  display: grid;
+
+  grid-template-columns: 80px minmax(0, 1fr);
+
+  gap: 30px;
+
+  width: 100%;
+
+  padding: 40px;
+
+  box-sizing: border-box;
+
+  background: #07141c;
+
+  border: 1px solid #193b4a;
+
+  border-radius: 24px;
+
+  transition: border-color 0.2s ease,
+              transform 0.2s ease;
+}
+
+.learning-topic:hover {
+  border-color: #08d9f5;
+
+  transform: translateY(-2px);
+}
+
+/* Completed topic */
+
+.learning-topic.completed {
+  border-color: #08d9f5;
+}
+
+/* =========================================
+   TOPIC NUMBER
+========================================= */
+
+.topic-number {
+  width: 66px;
+  height: 66px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  box-sizing: border-box;
+
+  border: 1px solid #08d9f5;
+
+  border-radius: 18px;
+
+  color: #08d9f5;
+
+  font-size: 20px;
+  font-weight: 700;
+}
+
+/* =========================================
+   TOPIC CONTENT
+========================================= */
+
+.topic-content {
+  min-width: 0;
+}
+
+.topic-content > span {
+  display: block;
+
+  color: #08d9f5;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+
+  margin-bottom: 14px;
+}
+
+.topic-content h2 {
+  margin: 0 0 14px;
+
+  color: #eef7ff;
+
+  font-size: 32px;
+
+  line-height: 1.2;
+}
+
+.topic-content p {
+  margin: 0;
+
+  color: #78a9ce;
+
+  font-size: 18px;
+
+  line-height: 1.6;
+}
+
+/* =========================================
+   COMPLETE TOPIC BUTTON
+========================================= */
+
+.complete-topic-btn {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  margin-top: 24px;
+
+  padding: 14px 22px;
+
+  background: transparent;
+
+  border: 1px solid #08d9f5;
+
+  border-radius: 12px;
+
+  color: #08d9f5;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.complete-topic-btn:hover {
+  background: #08d9f5;
+
+  color: #020b11;
+}
+
+.complete-topic-btn.completed {
+  background: #08d9f5;
+
+  color: #020b11;
+}
+
+/* =========================================
+   MODULE COMPLETE
+========================================= */
+
+.learning-complete {
+  width: 100%;
+
+  margin-top: 40px;
+  padding: 40px;
+
+  box-sizing: border-box;
+
+  background: #071c24;
+
+  border: 1px solid #08d9f5;
+
+  border-radius: 24px;
+
+  color: #eef7ff;
+}
+
+.learning-complete > span {
+  display: block;
+
+  margin-bottom: 16px;
+
+  color: #08d9f5;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+.learning-complete h2 {
+  margin: 0 0 14px;
+
+  color: #eef7ff;
+
+  font-size: 32px;
+
+  line-height: 1.25;
+}
+
+.learning-complete p {
+  margin: 0 0 25px;
+
+  color: #78a9ce;
+
+  font-size: 18px;
+
+  line-height: 1.6;
+}
+
+.learning-complete button {
+  display: inline-flex;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 14px 22px;
+
+  background: transparent;
+
+  border: 1px solid #08d9f5;
+
+  border-radius: 12px;
+
+  color: #08d9f5;
+
+  font-size: 16px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.2s ease;
+}
+
+.learning-complete button:hover {
+  background: #08d9f5;
+
+  color: #020b11;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 700px) {
+
+  .learning-page {
+    padding: 25px 15px;
+  }
+
+  .learning-container {
+    width: 100%;
+  }
+
+  .back-btn {
+    margin-bottom: 50px;
+  }
+
+  .learning-heading {
+    margin-bottom: 35px;
+  }
+
+  .learning-heading h1 {
+    font-size: 46px;
+  }
+
+  .learning-heading p {
+    font-size: 17px;
+  }
+
+  /* Progress */
+
+  .learning-progress {
+    padding: 22px;
+  }
+
+  .learning-progress-header {
+    align-items: flex-start;
+
+    flex-direction: column;
+
+    gap: 8px;
+  }
+
+  /* Topics */
+
+  .learning-topic {
+    grid-template-columns: 1fr;
+
+    gap: 22px;
+
+    padding: 25px;
+  }
+
+  .topic-number {
+    width: 58px;
+    height: 58px;
+  }
+
+  .topic-content h2 {
+    font-size: 27px;
+  }
+
+  .topic-content p {
+    font-size: 16px;
+  }
+
+  /* Complete */
+
+  .learning-complete {
+    padding: 25px;
+  }
+
+  .learning-complete h2 {
+    font-size: 27px;
+  }
+
+  .learning-complete p {
+    font-size: 16px;
+  }
+}
+
+/* =========================================
+   VERY SMALL SCREEN
+========================================= */
+
+@media (max-width: 420px) {
+
+  .learning-heading h1 {
+    font-size: 38px;
+  }
+
+  .learning-topic {
+    padding: 20px;
+  }
+
+  .learning-progress {
+    padding: 20px;
+  }
+
+  .complete-topic-btn,
+  .learning-complete button {
+    width: 100%;
+  }
+}
