@@ -1,5 +1,7 @@
 const express = require("express");
 const multer = require("multer");
+const path = require("path");
+const fs = require("fs");
 
 const protect = require("../middleware/authMiddleware");
 
@@ -14,8 +16,14 @@ const router = express.Router();
 // MULTER CONFIGURATION
 // ==========================================
 
+const uploadDir = "/tmp/uploads";
+
+if (!fs.existsSync(uploadDir)) {
+  fs.mkdirSync(uploadDir, { recursive: true });
+}
+
 const upload = multer({
-  dest: "uploads/",
+  dest: uploadDir,
 
   limits: {
     fileSize: 5 * 1024 * 1024,
@@ -34,21 +42,12 @@ const upload = multer({
 // ANALYZE RESUME
 // ==========================================
 
-router.post(
-  "/analyze",
-  protect,
-  upload.single("resume"),
-  analyzeResume
-);
+router.post("/analyze", protect, upload.single("resume"), analyzeResume);
 
 // ==========================================
 // GET LATEST RESUME
 // ==========================================
 
-router.get(
-  "/latest",
-  protect,
-  getLatestResume
-);
+router.get("/latest", protect, getLatestResume);
 
 module.exports = router;
