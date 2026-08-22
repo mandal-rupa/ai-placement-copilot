@@ -12,19 +12,16 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Routes
 app.use("/api/auth", authRoutes);
 app.use("/api/resume", resumeRoutes);
 app.use("/api/interview", interviewRoutes);
 
-// Health check
 app.get("/", (req, res) => {
   res.json({
     message: "AI Placement Copilot API is running 🚀",
   });
 });
 
-// MongoDB connection
 mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
@@ -35,5 +32,4 @@ mongoose
     console.error(error.message);
   });
 
-// Export Express app for Vercel
 module.exports = app;
