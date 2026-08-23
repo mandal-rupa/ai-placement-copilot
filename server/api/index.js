@@ -5,6 +5,8 @@ const authRoutes = require("../routes/authRoutes");
 const resumeRoutes = require("../routes/resumeRoutes");
 const interviewRoutes = require("../routes/interviewRoutes");
 
+const app = require("../server");
+
 const app = express();
 
 app.use(cors());
